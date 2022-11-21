@@ -1,7 +1,7 @@
 # defacing
 MRI anonymization algorithm
 
-This code removes the face from an MRI in a three-step procedure based on John Ashburner's and Karl Friston's "Unified segmentation" algorithm.
+This code removes the face from an MRI in a three-step procedure based on John Ashburner's and Karl Friston's "Unified segmentation" algorithm (for more details see the paper https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9598466/)
 
 * In a first step, the MRI is non-linearly realigned to MNI space, using as target the whole-head tissue probability map "NY-head" (ICBM-NY, https://www.parralab.org/nyhead/).
 * In a second step, the tissue probabily map is replaced by a version including the face as a separated tissue, and the face tissue is sampled into the original MRI.
